@@ -1,0 +1,105 @@
+:root {
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --neon-blue: #00d4ff;
+    --neon-green: #39ff14;
+    --neon-red: #ff3131;
+    --text-color: #c9d1d9;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container { max-width: 1200px; margin: auto; }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #30363d;
+}
+
+.logo { font-size: 24px; font-weight: bold; letter-spacing: 2px; }
+.logo span { color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue); }
+
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #30363d;
+}
+
+.text-green { color: var(--neon-green); text-shadow: 0 0 5px var(--neon-green); }
+.text-blue { color: var(--neon-blue); text-shadow: 0 0 5px var(--neon-blue); }
+.text-yellow { color: #ffea00; }
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+}
+
+.command-center, .console-box {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--neon-blue);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.1);
+}
+
+.input-group { display: flex; gap: 10px; margin-bottom: 15px; }
+input {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.full-width { margin-bottom: 15px; width: 97%; }
+
+.button-group { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+.btn {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-blue { background: #0056b3; color: white; border: 1px solid var(--neon-blue); }
+.btn-red { background: #8b0000; color: white; border: 1px solid var(--neon-red); }
+.btn-green { background: #006400; color: white; border: 1px solid var(--neon-green); }
+.btn-gray { background: #333; color: white; }
+
+.btn:hover { opacity: 0.8; transform: scale(1.02); }
+
+.logs {
+    background: black;
+    height: 250px;
+    overflow-y: auto;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+.log-system { color: var(--neon-green); }
+.log-bot { color: var(--neon-blue); }
