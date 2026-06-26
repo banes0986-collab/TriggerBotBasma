@@ -3,52 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legacy Bots</title>
+    <title>Legacy Overload Hub - Premium Edition</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="bg-overlay"></div>
+    <div class="cyber-grid"></div>
+    <div class="bg-glow-top"></div>
+    <div class="bg-glow-bottom"></div>
 
     <header class="navbar">
-        <div class="logo">LEGACY<span>saldırı merkezi</span></div>
-        <div class="developer-credits">Developed by: triggerbabaa & rextro</div>
+        <div class="logo-area">
+            <i class="fas fa-shield-virus logo-icon"></i>
+            <div class="logo">LEGACY<span>OVERLOAD</span></div>
+        </div>
+        <div class="developer-badge">
+            <i class="fas fa-code-branch"></i> AUTH: triggerbabaa & rextro
+        </div>
     </header>
 
     <main class="container">
         <section class="hero-section">
-            <h1 class="glitch-title">SUNUCU YÜKLEME PANELİ</h1>
-            <p class="subtitle">Yüksek kapasiteli altyapı yükleme ve siber operasyon merkezi.</p>
+            <div class="cyber-tag">NEXT-GEN INFRASTRUCTURE SYSTEM</div>
+            <h1 class="glitch-title">SİBER YÜKLEME PANELİ</h1>
+            <p class="subtitle">Yüksek bant genişlikli altyapı yükleme, stres dayanıklılık ve penetrasyon test merkezi.</p>
         </section>
 
         <section class="panel-section">
             <div class="panel-card">
+                <div class="corner-line top-left"></div>
+                <div class="corner-line top-right"></div>
+                <div class="corner-line bottom-left"></div>
+                <div class="corner-line bottom-right"></div>
+
                 <div class="panel-header">
-                    <h2><i class="fas fa-microchip"></i> KONTROL PANELİ</h2>
-                    <span class="status-indicator">SİSTEM HAZIR</span>
+                    <div class="header-title">
+                        <i class="fas fa-server"></i>
+                        <h3>CORE NETWORK CONTROLLER</h3>
+                    </div>
+                    <div class="status-wrapper">
+                        <span class="pulse-dot"></span>
+                        <span class="status-indicator">PIPELINE READY</span>
+                    </div>
                 </div>
                 
                 <form class="test-form">
                     <div class="input-group">
-                        <label for="ip"><i class="fas fa-terminal"></i> HEDEF SUNUCU ADRESİ (IP / DOMAIN)</label>
-                        <input type="text" id="ip" placeholder="play.example.com" required>
+                        <label for="ip"><i class="fas fa-terminal font-neon"></i> HEDEF SUNUCU ADRESİ (IP / DOMAIN)</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="ip" placeholder="play.legacynetwork.com" required>
+                            <i class="fas fa-crosshairs input-icon"></i>
+                        </div>
                     </div>
 
                     <div class="form-row">
                         <div class="input-group">
-                            <label for="port"><i class="fas fa-plug"></i> PORT</label>
-                            <input type="number" id="port" placeholder="25565" min="1" max="65535" required>
+                            <label for="port"><i class="fas fa-plug font-neon"></i> PORT</label>
+                            <div class="input-wrapper">
+                                <input type="number" id="port" placeholder="25565" min="1" max="65535" required>
+                            </div>
                         </div>
                         <div class="input-group">
-                            <label for="bot-count"><i class="fas fa-robot"></i> BOT MİKTARI</label>
-                            <input type="number" id="bot-count" placeholder="100" min="1" max="100000" required>
+                            <label for="bot-count"><i class="fas fa-robot font-neon"></i> BOT MİKTARI</label>
+                            <div class="input-wrapper">
+                                <input type="number" id="bot-count" placeholder="100" min="1" max="100000" required>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- 1000522465.jpg Görselindeki Elektrikli/Neon OVERLOAD Butonu -->
                     <button type="submit" class="overload-btn">
-                        <span class="btn-text">saldıryı başlat</span>
+                        <span class="btn-text">OVERLOAD</span>
                         <div class="lightning-crack top-crack"></div>
                         <div class="lightning-crack bottom-crack"></div>
                     </button>
@@ -58,7 +83,11 @@
     </main>
 
     <footer>
-        <p>Interface Design by <strong>triggerbabaa & rextro</strong> &copy; 2026</p>
+        <div class="footer-content">
+            <div class="footer-line"></div>
+            <p>Core Engine Developed by <span class="dev-name">triggerbabaa</span> & <span class="dev-name">rextro</span> &copy; 2026</p>
+            <p class="secure-text"><i class="fas fa-user-shield"></i> Secure Encrypted Interface Connection Established.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
