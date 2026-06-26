@@ -1,95 +1,150 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legacy Overload Hub - Premium Edition</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <div class="cyber-grid"></div>
-    <div class="bg-glow-top"></div>
-    <div class="bg-glow-bottom"></div>
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">GaiaNet node dashboard</h1>
+        <p class="lead text-muted">Manage your own GaiaNet node.</p>
+        <p>
+            <a href="chatbot-ui/index.html" class="btn btn-primary">Chat with this node</a>
+            <a href="https://www.gaianet.ai/" class="btn btn-info">Learn more about GaiaNet</a>
+        </p>
+    </div>
+</section>
 
-    <header class="navbar">
-        <div class="logo-area">
-            <i class="fas fa-shield-virus logo-icon"></i>
-            <div class="logo">LEGACY<span>OVERLOAD</span></div>
-        </div>
-        <div class="developer-badge">
-            <i class="fas fa-code-branch"></i> AUTH: triggerbabaa & rextro
-        </div>
-    </header>
+<hr>
 
-    <main class="container">
-        <section class="hero-section">
-            <div class="cyber-tag">NEXT-GEN INFRASTRUCTURE SYSTEM</div>
-            <h1 class="glitch-title">SİBER YÜKLEME PANELİ</h1>
-            <p class="subtitle">Yüksek bant genişlikli altyapı yükleme, stres dayanıklılık ve penetrasyon test merkezi.</p>
-        </section>
+<div id="api-sample" class="container">
+    <h4>Send an API request to the node</h4>
+    <p>The node supports the OpenAI JSON format. If you have an OpenAI-based agent or application, you simply need to replace the <code>api.openai.com</code> URL in your app with the node's public URL.</p>
+    <p>
+        <pre><code id="api-req">
+curl -X POST <public_url>/v1/chat/completions \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{"messages":[{"role":"system", "content": "You are a helpful assistant."}, {"role":"user", "content": "Where is Paris?"}]}'
+        </code></pre>
+    </p>
+</div>
 
-        <section class="panel-section">
-            <div class="panel-card">
-                <div class="corner-line top-left"></div>
-                <div class="corner-line top-right"></div>
-                <div class="corner-line bottom-left"></div>
-                <div class="corner-line bottom-right"></div>
+<div id="openaiInfo" class="container">
+    <p>Replace OpenAI configuration in your app with the following.</p>
+    <table id="openaiTable" class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Config option</th>
+            <th scope="col">Value</th>
+        </tr>
+        </thead>
+        <tbody>
 
-                <div class="panel-header">
-                    <div class="header-title">
-                        <i class="fas fa-server"></i>
-                        <h3>CORE NETWORK CONTROLLER</h3>
-                    </div>
-                    <div class="status-wrapper">
-                        <span class="pulse-dot"></span>
-                        <span class="status-indicator">PIPELINE READY</span>
-                    </div>
-                </div>
-                
-                <form class="test-form">
-                    <div class="input-group">
-                        <label for="ip"><i class="fas fa-terminal font-neon"></i> HEDEF SUNUCU ADRESİ (IP / DOMAIN)</label>
-                        <div class="input-wrapper">
-                            <input type="text" id="ip" placeholder="play.legacynetwork.com" required>
-                            <i class="fas fa-crosshairs input-icon"></i>
-                        </div>
-                    </div>
+        </tbody>
+    </table>
+</div>
+</div>
 
-                    <div class="form-row">
-                        <div class="input-group">
-                            <label for="port"><i class="fas fa-plug font-neon"></i> PORT</label>
-                            <div class="input-wrapper">
-                                <input type="number" id="port" placeholder="25565" min="1" max="65535" required>
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <label for="bot-count"><i class="fas fa-robot font-neon"></i> BOT MİKTARI</label>
-                            <div class="input-wrapper">
-                                <input type="number" id="bot-count" placeholder="100" min="1" max="100000" required>
-                            </div>
-                        </div>
-                    </div>
+<div id="nodeInfo" class="container">
+    <p>Node information</p>
+    <table id="nodeTable" class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Attribute</th>
+            <th scope="col">Value</th>
+        </tr>
+        </thead>
+        <tbody>
 
-                    <button type="submit" class="overload-btn">
-                        <span class="btn-text">OVERLOAD</span>
-                        <div class="lightning-crack top-crack"></div>
-                        <div class="lightning-crack bottom-crack"></div>
-                    </button>
-                </form>
-            </div>
-        </section>
-    </main>
+        </tbody>
+    </table>
+</div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-line"></div>
-            <p>Core Engine Developed by <span class="dev-name">triggerbabaa</span> & <span class="dev-name">rextro</span> &copy; 2026</p>
-            <p class="secure-text"><i class="fas fa-user-shield"></i> Secure Encrypted Interface Connection Established.</p>
-        </div>
-    </footer>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+function addToTable(k, v, table_id) {
+    const row = document.createElement('tr');
 
-    <script src="script.js"></script>
+    const keyCell = document.createElement('td');
+    const valueCell = document.createElement('td');
+
+    keyCell.textContent = k;
+    valueCell.textContent = v;
+
+    row.appendChild(keyCell);
+    row.appendChild(valueCell);
+
+    const tableBody = document.getElementById(table_id).querySelector('tbody');
+    tableBody.appendChild(row);
+}
+
+// Fetch the JSON file
+fetch('config_pub.json')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+		    
+        var key = "Node ID or address";
+        var val = data["address"];
+        addToTable (key, val, 'nodeTable');
+
+        key = "GaiaNet domain";
+        val = data["domain"];
+        addToTable (key, val, 'nodeTable');
+
+        key = "Public URL";
+        val = "https://" + data["address"] + "." + data["domain"];
+        addToTable (key, val, 'nodeTable');
+        key = "API base URL";
+        val = "https://" + data["address"] + "." + data["domain"] + "/v1";
+        addToTable (key, val, 'openaiTable');
+
+        key = "Description";
+        val = data["description"];
+        addToTable (key, val, 'nodeTable');
+
+        key = "Finetuned LLM";
+        val = data["chat"].split('/').pop();
+        addToTable (key, val, 'nodeTable');
+        key = "Model name for chat";
+	// val = val.slice(0, -5);
+        val = data["chat_name"].split('/').pop();
+	addToTable (key, val, 'openaiTable');
+
+        key = "System prompt";
+        val = data["system_prompt"];
+        addToTable (key, val, 'nodeTable');
+
+        key = "Embedding model for knowledge vectors";
+        val = data["embedding"].split('/').pop();
+        addToTable (key, val, 'nodeTable');
+        key = "Model name for text embedding";
+	// val = val.slice(0, -5);
+        val = data["embedding_name"].split('/').pop();
+	addToTable (key, val, 'openaiTable');
+
+        key = "Knowledge base";
+        val = data["snapshot"].split('/').pop();
+        addToTable (key, val, 'nodeTable');
+
+        key = "RAG prompt";
+        val = data["rag_prompt"];
+        addToTable (key, val, 'nodeTable');
+
+        key = "API key";
+        val = "Leave it empty or fill in any value";
+        addToTable (key, val, 'openaiTable');
+
+        var code_snippet = document.getElementById("api-req").innerHTML;
+        // document.getElementById("api-req").innerHTML = code_snippet.replace("<public_url>", "https://" + data["address"] + "." + data["domain"]);
+        document.getElementById("api-req").innerHTML = code_snippet.replace("<public_url>", window.location.protocol + "//" + window.location.host);
+
+    }).catch(error => console.error('Error fetching JSON:', error));
+</script>
 </body>
 </html>
