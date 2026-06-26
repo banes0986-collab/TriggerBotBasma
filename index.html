@@ -3,92 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legacy Stress</title>
+    <title>Legacy Bots</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Arka Plan Efekti -->
     <div class="bg-overlay"></div>
 
-    <!-- Üst Menü / Navbar -->
     <header class="navbar">
-        <div class="logo">LEGACY<span>STRESS</span></div>
-        <nav>
-            <a href="#" class="active">Ana Sayfa</a>
-            <a href="#">Makineler</a>
-            <a href="#">Ağ Durumu</a>
-            <a href="#">Destek</a>
-        </nav>
+        <div class="logo">LEGACY<span>saldırı merkezi</span></div>
+        <div class="developer-credits">Developed by: triggerbabaa & rextro</div>
     </header>
 
     <main class="container">
-        <!-- Başlık ve İstatistik Bölümü -->
         <section class="hero-section">
-            <h1 class="glitch-title" data-text="KUVVET VE PERFORMANS TESTİ">güçlü makineler ile her sunucuya bot basilmaktadir</h1>
-            <p class="subtitle">kendi sunucunuzu test edin!.</p>
-            
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-bolt"></i></div>
-                    <h3>%99.9 Uptime</h3>
-                    <p>Kesintisiz Güç ve Sürekli Aktif Altyapı</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-robot"></i></div>
-                    <h3>Sayısız Bot</h3>
-                    <p>çok güçlü bot saldırı merkezi🔥</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-server"></i></div>
-                    <h3>Güçlü Makineler</h3>
-                    <p>güçlü makinelerimiz ile her türlü sunucuya bot basılır ⚡</p>
-                </div>
-            </div>
+            <h1 class="glitch-title">SUNUCU YÜKLEME PANELİ</h1>
+            <p class="subtitle">Yüksek kapasiteli altyapı yükleme ve siber operasyon merkezi.</p>
         </section>
 
-        <!-- Saldırı /  Kontrol Paneli -->
         <section class="panel-section">
             <div class="panel-card">
                 <div class="panel-header">
-                    <h2><i class="fas fa-terminal"></i> saldırı merkezi</h2>
-                    <span class="pulse-indicator">AKTİF</span>
+                    <h2><i class="fas fa-microchip"></i> KONTROL PANELİ</h2>
+                    <span class="status-indicator">SİSTEM HAZIR</span>
                 </div>
                 
-                <form onsubmit="event.preventDefault();" class="test-form">
+                <form class="test-form">
                     <div class="input-group">
-                        <label for="ip"><i class="fas fa-network-wired"></i> Hedef IP Adresi / Alan Adı</label>
-                        <input type="text" id="ip" placeholder="Örn: 192.168.1.1 veya play.example.com" required>
+                        <label for="ip"><i class="fas fa-terminal"></i> HEDEF SUNUCU ADRESİ (IP / DOMAIN)</label>
+                        <input type="text" id="ip" placeholder="play.example.com" required>
                     </div>
 
                     <div class="form-row">
                         <div class="input-group">
-                            <label for="port"><i class="fas fa-door-open"></i> Port</label>
-                            <input type="number" id="port" placeholder="Örn: 25565" min="1" max="65535" required>
+                            <label for="port"><i class="fas fa-plug"></i> PORT</label>
+                            <input type="number" id="port" placeholder="25565" min="1" max="65535" required>
                         </div>
                         <div class="input-group">
-                            <label for="bot-count"><i class="fas fa-users-cog"></i> Gönderilecek Bot Sayısı</label>
-                            <input type="number" id="bot-count" placeholder="Örn: 100" min="1" max="50000" required>
+                            <label for="bot-count"><i class="fas fa-robot"></i> BOT MİKTARI</label>
+                            <input type="number" id="bot-count" placeholder="100" min="1" max="100000" required>
                         </div>
                     </div>
 
-                    <!-- Yıldırımlı ve Glitchli Buton -->
-                    <button type="submit" class="lightning-btn glitch-btn">
-                        <span class="btn-text">Saldırıyı başlat</span>
-                        <span class="glitch-layer">SİMÜLASYONU BAŞLAT</span>
-                        <div class="lightning-flash"></div>
+                    <!-- 1000522465.jpg Görselindeki Elektrikli/Neon OVERLOAD Butonu -->
+                    <button type="submit" class="overload-btn">
+                        <span class="btn-text">saldıryı başlat</span>
+                        <div class="lightning-crack top-crack"></div>
+                        <div class="lightning-crack bottom-crack"></div>
                     </button>
                 </form>
             </div>
         </section>
     </main>
 
-        <footer>
-        <p>&copy; Tasarımcılar Triggerbabaa & Rextro.</p>
+    <footer>
+        <p>Interface Design by <strong>triggerbabaa & rextro</strong> &copy; 2026</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
