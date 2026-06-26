@@ -1,0 +1,91 @@
+settings:
+  async-processing: true
+  geyser-support: false
+  send-alerts-to-operators: true
+  kick-on-max-vl: true
+
+punishments:
+  commands:
+    - "kick %player% &c[GrimAC] Unfair Advantage Detected"
+
+alerts:
+  console: true
+  discord: false
+  permission: "grim.alerts"
+  cooldown-ms: 150
+
+checks:
+  combat:
+    enabled: true
+
+    killaura:
+      enabled: true
+      max-vl: 5
+      prediction-accuracy: 0.985
+      check-post-prediction: true
+
+    legitaura:
+      enabled: true
+      max-vl: 6
+      angle-validation: true
+      smooth-aim-detection: true
+
+    reach:
+      enabled: true
+      max-vl: 3
+      max-distance: 3.0
+
+    hitbox:
+      enabled: true
+      max-vl: 3
+
+    autoclicker:
+      enabled: true
+      max-vl: 8
+      max-cps: 18
+
+  player:
+    enabled: true
+
+    nuker:
+      enabled: true
+      max-vl: 3
+      max-blocks-per-tick: 2
+
+    fastbreak:
+      enabled: true
+      max-vl: 4
+      packet-delay-check: true
+
+    badpackets:
+      enabled: true
+      max-vl: 2
+
+    inventory:
+      enabled: true
+      max-vl: 3
+      inventory-move-check: true
+
+  movement:
+    enabled: true
+
+    simulation:
+      enabled: true
+      max-vl: 4
+      strict-physics: true
+
+    speed:
+      enabled: true
+      max-vl: 4
+
+    fly:
+      enabled: true
+      max-vl: 3
+
+    scaffold:
+      enabled: true
+      max-vl: 4
+
+    nofall:
+      enabled: true
+      max-vl: 2
